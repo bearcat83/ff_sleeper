@@ -1,6 +1,6 @@
 # getMatchups Function Documentation
 
-The `getMatchups` function is part of a Google Apps Script that interacts with the Sleeper API to fetch NFL matchup data for a specified league and updates it in a Google Sheets document. This documentation explains each step of the script.
+The `getMatchups` function is part of a Google Apps Script that interacts with the Sleeper API to fetch NFL fantasy matchup data for a specified league and updates it in a Google Sheets document. This documentation explains each step of the script.
 
 ## `getPacificTime()`
 
