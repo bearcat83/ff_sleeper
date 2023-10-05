@@ -1,6 +1,6 @@
 /////////getMatchups function will only run between specified time defined in first two functions/////////
 
-////////documentation: https://github.com/bearcat83/ff_sleeper/blob/main/1-documentation.md////////
+// For more details, check the [documentation](https://github.com/bearcat83/ff_sleeper/blob/main/1-documentation.md).
 
 function getPacificTime() {
     // Set the time zone to Pacific Time (PT)
