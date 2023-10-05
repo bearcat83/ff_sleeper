@@ -4,7 +4,7 @@ The `getMatchups` function is part of a Google Apps Script that interacts with t
 
 ## `getPacificTime()`
 
-This function retrieves the current time in Pacific Time (PT) zone and returns it in the 'HH:mm' format.
+This function retrieves the current time in Pacific Time (PT) zone and returns it in the 'HH:mm' format. Google scripts triggers leverage relative current timezone, so it's useful to have in-script triggers stay consistent. 
 
 ## `getCurrentNFLWeek()`
 
