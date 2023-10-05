@@ -1,3 +1,6 @@
+// Script to increment week used by index match/lookups within the Google sheet itself
+// For more details, please see the documentation at: https://github.com/bearcat83/ff_sleeper/blob/main/documentation/3-doc_increment_week.md
+
 function incrementWeekNumber() {
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Live Standings");
     var cell = sheet.getRange("E17");

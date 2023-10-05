@@ -1,3 +1,7 @@
+// Script to pull back team names based on user_id/owner_id & roster_id mapping
+// For more details, please see the documentation at: https://github.com/bearcat83/ff_sleeper/blob/main/documentation/4-team_names_update.md
+
+
 function outputUserRosterMappingToConfigSheet() {
     var config_sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("config");
     var league_id = config_sheet.getRange('A2').getValue();

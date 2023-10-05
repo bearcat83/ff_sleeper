@@ -1,3 +1,6 @@
+// Script to update official standings
+// For more details, please see the documentation at: https://github.com/bearcat83/ff_sleeper/blob/main/documentation/2-doc_weekly_official_update.md
+
 function copyValuesToOfficialStandings() {
     var sourceSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Live Standings");
     var targetSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Official Standings");
