@@ -6,7 +6,7 @@ The `updateMatchupResults` function is part of a Google Apps Script that perform
 
 The purpose of this function is to fetch user team names and matchup data from the Sleeper API, calculate win or loss for each matchup, and update the data in a Google Sheets document. This script is typically used to track fantasy football matchups and outcomes.
 
-**For more details, please see the [documentation](https://github.com/bearcat83/ff_sleeper/blob/main/5-matchup_only.md).**
+**For more details, please see the [documentation](https://github.com/bearcat83/ff_sleeper/blob/main/documentation/5-matchup_only.md).**
 
 ## Function Steps
 

@@ -1,6 +1,6 @@
 //Perform matchup only comparison based on schedule for current week
 // For more details, please see the documentation at: 
-// https://github.com/bearcat83/ff_sleeper/blob/main/5-matchup_only.md
+// https://github.com/bearcat83/ff_sleeper/blob/main/documentation/5-matchup_only.md
 
 function updateMatchupResults() {
   // Fetch user team names
