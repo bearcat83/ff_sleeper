@@ -61,7 +61,9 @@ function updateMatchupResults() {
   var stateUrl = "https://api.sleeper.app/v1/state/nfl";
   var stateResponse = UrlFetchApp.fetch(stateUrl);
   var stateData = JSON.parse(stateResponse);
-  var currentWeek = stateData.week;
+  var currentWeek = stateData.display_week; //using display_week as it won't change until Wednesday
+  Logger.log("API Response Code for stateData: " + stateResponse.getResponseCode());
+  Logger.log("NFL Current Week Value: " + currentWeek);
 
   // Fetch matchups data for the specified week
   var matchupsUrl = "https://api.sleeper.app/v1/league/" + league_id + "/matchups/" + currentWeek;

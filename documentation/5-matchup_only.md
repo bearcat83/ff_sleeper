@@ -18,7 +18,7 @@ Here's a breakdown of what the `updateMatchupResults` function does:
    - Parses the JSON responses and creates a mapping of user IDs to team names.
 
 2. **Fetch NFL State Data**
-   - Makes an API request to fetch NFL state data from the Sleeper API to determine the current NFL week.
+   - Makes an API request to fetch NFL state data from the Sleeper API to determine the current Sleeper "Display" week. display_week is used to avoid the matchup function from pulling back data for a week that hasn't begun since this script is scheduled to run some time on Mondays between 9-10pm PT.
    - Parses the JSON response to obtain the `currentWeek`.
 
 3. **Fetch Matchups Data**
