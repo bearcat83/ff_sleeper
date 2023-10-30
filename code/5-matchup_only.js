@@ -2,6 +2,24 @@
 // For more details, please see the documentation at: 
 // https://github.com/bearcat83/ff_sleeper/blob/main/documentation/5-matchup_only.md
 
+function clearRowsWithMatch(outputSheet, currentWeek) {
+  var data = outputSheet.getDataRange().getValues();
+  var rowsToClear = [];
+
+  for (var i = data.length - 1; i >= 0; i--) {
+    var weekValue = data[i][1]; // Assuming week values are in column B (index 1)
+
+    if (weekValue == currentWeek) {
+      rowsToClear.push(i + 1); // Adding 1 to convert from 0-based index to 1-based row number
+    }
+  }
+
+  // Clear the content of rows where weekValue matches currentWeek
+  rowsToClear.forEach(function (row) {
+    outputSheet.getRange(row, 1, 1, data[row - 1].length).clearContent();
+  });
+}
+
 function updateMatchupResults() {
   // Fetch user team names
   var config_sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("config");
@@ -64,6 +82,12 @@ function updateMatchupResults() {
   var currentWeek = stateData.display_week; //using display_week as it won't change until Wednesday
   Logger.log("API Response Code for stateData: " + stateResponse.getResponseCode());
   Logger.log("NFL Current Week Value: " + currentWeek);
+
+  // Get the sheet where you want to output the data
+  var outputSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Matchups Only");
+
+  //Clear and replace the rows with match condition satisfied
+  clearRowsWithMatch(outputSheet, currentWeek);
 
   // Fetch matchups data for the specified week
   var matchupsUrl = "https://api.sleeper.app/v1/league/" + league_id + "/matchups/" + currentWeek;

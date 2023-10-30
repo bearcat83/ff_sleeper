@@ -41,6 +41,7 @@ Here's a breakdown of what the `updateMatchupResults` function does:
 6. **Output Results to "Matchups Only" Sheet**
    - Checks if headers are already present in the "Matchups Only" sheet, and if not, adds them.
    - Appends the calculated matchup results to the sheet starting from the next available row.
+   - Overwrites the data if current week values already present (given this runs once per day)
 
 7. **Error Handling**
    - Catches and logs any errors that may occur during the execution of the function.
