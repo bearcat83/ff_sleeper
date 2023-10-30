@@ -14,9 +14,9 @@ This function sends a request to the Sleeper API to fetch the current NFL week. 
 
 This function checks whether the script should run based on the current time and day of the week in Pacific Time (PT). It compares the current time with predefined start and end times for Sunday, Monday through Thursday, and returns `true` if the script should run at the current time, otherwise `false`.
 
-## `clearAndReplaceLast10Rows(outputSheet, currentWeek)`
+## `function clearRowsWithMatch(outputSheet, currentWeek)`
 
-This function is responsible for clearing and replacing the last 10 rows of data in the output sheet (Google Sheets) that match the current NFL week. It iterates through the rows in reverse order, searching for matches with the current week. If it finds a match, it adds the row number to `rowsToClear` and clears the content of those rows.
+This function is responsible for clearing and replacing the rows of data in the output sheet (Google Sheets) that match the current NFL week. It iterates through the rows in reverse order, searching for matches with the current week. If it finds a match, it clears the row.
 
 ## `updateStatusCell(outputSheet, status)`
 
@@ -33,7 +33,7 @@ This is the main function of the script, responsible for fetching NFL matchup da
 5. If the script should run:
    - Sets the status to "Updating" using `updateStatusCell()`.
    - Retrieves the current NFL week using `getCurrentNFLWeek()`.
-   - Clears and replaces the last 10 rows for the current week using `clearAndReplaceLast10Rows()`.
+   - Clears and replaces the rows for the current week using `clearRowsWithMatch()`.
    - Creates headers for the table if the sheet is empty.
    - Initializes a `currentRow` counter for writing data.
    - Constructs the API URL for fetching matchup data for the current week.
